@@ -30,13 +30,15 @@ const UselessTextInput = () => {
 
 const styles = StyleSheet.create({
   input: {
-    width: width / 1.3,
-    height: height * 0.065,
-    margin: 12,
-    borderWidth: 1,
+    width: width / 1.6,
+    height: height * 0.06,
+    margin: 6,
+    
     padding: 10,
     borderRadius: 30,
     backgroundColor: 'white',
+    fontSize: 12,
+    elevation: 12,
     
     
     

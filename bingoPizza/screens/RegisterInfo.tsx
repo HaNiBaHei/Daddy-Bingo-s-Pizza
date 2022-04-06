@@ -1,36 +1,25 @@
 import React  from 'react';
-import { StyleSheet,
-  Image,
-  Dimensions,
-  TextInput} from 'react-native';
+import { StyleSheet, Dimensions, TextInput} from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import LoginInput from '../components/LoginTextInput';
-
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'LogInTab'>) {
-  return (
-    <View style={styles.container}>
-      <View style={styles.pizzaBorder}>
-        <Image source={require('../assets/images/pizza(login).png')} style={styles.pizza}/>
-      </View>
-      <View style={styles.login}>
-        <View style={styles.roundedrec}>
-          <LoginInput />
-        </View>
-      </View>
-    </View>
-  );
-}
 
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 
-const UselessTextInput = () => {
-  const [text, onChangeText] = React.useState("Useless Text");
-  const [number, onChangeNumber] = React.useState(null);
+export default function TabOneScreen({ navigation }: RootTabScreenProps<'LogInTab'>) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.baseText}>Hello</Text>
+      <View style={styles.roundedrec}/>
+          
+        
+    </View>
+  );
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -39,35 +28,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FF6D6D',
   },
-  title: {
+  baseText: {
     fontSize: 20,
-    fontWeight: 'bold',
-  },
-  pizzaBorder: {
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: screenWidth,
-    height: screenHeight/2,
-  },
-  pizza: {
-    width: 400,
-    height: 400,
-  },
-  login: {
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    width: screenWidth,
-    height: screenHeight/2,
+
   },
   roundedrec: {
-    
-    borderColor:'rgba(0,0,0,0.2)',
     alignItems:'center',
     justifyContent:'center',
-    width:screenWidth*.75,
-    height:screenHeight*.4,
-    backgroundColor:'#fff',
+    width:screenWidth*.8,
+    height:screenHeight*.5,
+    backgroundColor:'white',
     borderRadius:50,
     elevation: 10,
     
