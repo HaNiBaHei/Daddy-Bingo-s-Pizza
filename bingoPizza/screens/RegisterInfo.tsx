@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
   },
   baseText: {
     fontSize: 20,
-
   },
   roundedrec: {
     alignItems:'center',
